@@ -1,3 +1,16 @@
+@use "sass:math";
+
+// BRAND COLOURS
+$brand-color: #429BD6;
+$secondary-brand-color: #244a64;
+
+// TEXT COLOURS
+$text-color-dark: black;
+$text-color-light: white;
+
+// UTILITY VARIABLES
+$link-hover-selector: '&:hover, &:focus, &:active';
+=======
 // COLORS
 $brand-color: #429bd6;
 $secondary-color: #244a64;
