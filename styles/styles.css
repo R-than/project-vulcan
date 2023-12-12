@@ -21,6 +21,7 @@ body {
   margin: 0;
 }
 
+
 header {
   background-color: rgba(58, 58, 58, 0.4941176471);
   width: 100%;
@@ -53,5 +54,6 @@ header {
 .nav-menu a:hover, .nav-menu a:focus, .nav-menu a:active {
   background-color: #429BD6;
 } 
+
 
 /*# sourceMappingURL=styles.css.map */
