@@ -21,6 +21,154 @@ body {
   margin: 0;
 }
 
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.question h2 {
+  color: white;
+  padding-top: 2rem;
+  margin-top: 0;
+}
+
+.question p {
+  color: white;
+}
+
+.machine div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid black;
+  text-align: center;
+  align-items: center;
+  place-items: center;
+}
+
+.machine-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.machine-text h2 {
+  width: 100%;
+  place-items: center;
+  align-items: center;
+  grid-column: 2/3;
+  margin: 0;
+}
+
+.machine-text p {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  overflow: auto;
+}
+
+.machine h2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  place-items: center;
+  grid-column: span;
+}
+
+.blue-wave {
+  height: 8rem;
+  width: fit-content;
+  transform: scale(110%);
+}
+
+.question-wrapper {
+  background-color: #244963;
+  padding: 1rem 1rem;
+}
+
+.question div {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem 0;
+}
+
+.question label {
+  color: white;
+  padding: 0.5rem 0;
+}
+
+.question select {
+  padding: 10px 0;
+  background-color: gray;
+}
+
+.question select:hover {
+  background-color: white;
+}
+
+.question-button {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  width: 100%;
+  padding: 0.8rem 2rem;
+  margin: 2rem 0;
+  background-color: #429bd6;
+  text-decoration: none;
+}
+
+.question-button a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.about-us-container {
+  background-image: url(../images/bg-section-about-us.jpg);
+  width: 100%;
+}
+
+.about-us h3 {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.about-us p {
+  color: white;
+}
+
+.about-us {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  place-items: center;
+  flex-direction: column;
+  padding: 10rem 2rem;
+}
+
+.about-us-button {
+  display: flex;
+  justify-content: center;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: transparent;
+  padding: 20px 10px;
+  margin: 2rem 0;
+  width: 37%;
+}
+
+.about-us-button a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 
 header {
   background-color: rgba(58, 58, 58, 0.4941176471);
@@ -32,14 +180,12 @@ header {
   background-color: transparent;
   display: none;
 }
-
 .nav-menu ul {
   margin: 0;
   padding: 0;
   line-height: 1;
   list-style: none;
 }
-
 .nav-menu a {
   display: block;
   line-height: 40px;
@@ -50,10 +196,8 @@ header {
   text-decoration: none;
   outline: none;
 }
-
 .nav-menu a:hover, .nav-menu a:focus, .nav-menu a:active {
-  background-color: #429BD6;
-} 
-
+  background-color: #429bd6;
+}
 
 /*# sourceMappingURL=styles.css.map */
