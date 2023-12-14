@@ -1,1 +1,23 @@
 @use "variables" as *;
+
+.video-container {
+  background-color: $vulcan-blue;
+  object-fit: cover;
+  height: 500px;
+  max-width: 100%;
+  display: flex;
+}
+
+.video {
+  margin: 0 auto;
+  position: relative;
+  align-items: center;
+  //   FIX BORDER.. MAKE IT WORK SOMEHOW
+  border: 5px teal;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.newsletter {
+  background-color: $vulcan-light-blue;
+}
