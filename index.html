@@ -12,20 +12,48 @@
 
     <!-- *** IMPORTANT *** DO NOT DELETE OR EDIT THE NEXT LINE OF CODE - IT IS IMPORTANT FOR THE GULP BUILD PROCESS. SEE YOUR INSTRUCTOR FIRST IF YOU WANT TO EDIT OR DELETE THIS LINE -->
     <link rel="stylesheet" href="styles/styles.css?cachebuster=1" />
+    <script defer src="scripts/script.js"></script>
   </head>
   <body>
     <!-- the following code is written by Lexie -->
-    <!-- <header id="header">
-		<div class="header-container">
-			<div class="header-content">
-				<div class="logo">
-					<a href="#"><img src="images/logo-white-vulcan.svg"></a>
-				</div>
-			</div>
-		</div>
-	</header> -->
+    <header class="my-header">
+      <div class="header-wrapper">
+        <a href="index.html"
+          ><img class="site-logo" src="images/logo-white-vulcan.svg"
+        /></a>
+        <button id="hamburger-menu"></button>
+      </div>
+      <nav class="page-navigation" id="sidebar-menu">
+        <ul class="page-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="attract.html">Attract</a></li>
+          <li><a href="eats.html">Eats</a></li>
+          <li><a href="credits.html">Credits</a></li>
+        </ul>
+      </nav>
+    </header>
     <div class="hero-container">
-      <img class="slideshow-image-1" src="images/header-slider-img-01.jpg" />
+      <div class="image-container">
+        <div class="slide">
+          <img
+            class="slideshow-image-1"
+            src="images/header-slider-img-01.jpg"
+          />
+        </div>
+        <div class="slide">
+          <img
+            class="slideshow-image-1"
+            src="images/header-slider-img-02.jpg"
+          />
+        </div>
+        <div class="slide">
+          <img
+            class="slideshow-image-1"
+            src="images/header-slider-img-03.jpg"
+          />
+        </div>
+      </div>
       <div class="hero-text">
         <h2>
           WE DESIGN AND FABRICATE INDESTRUCTIBLE WASTEWATER SCREENS. ENOUGH
@@ -38,9 +66,9 @@
       </div>
     </div>
 
-	<div class="border-break">
-		<img src="images/wave-white.png">
-	</div>
+    <div class="border-break">
+      <img src="images/wave-white.png" />
+    </div>
 
     <!-- the following code is done by Nadia -->
     <section>

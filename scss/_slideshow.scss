@@ -1,2 +1,10 @@
 @use 'variables' as *;
 @use 'mixins' as *;
+
+.slide {
+    display: none;
+   }
+   
+   .slide.active {
+    display: block;
+   }

@@ -25,8 +25,29 @@ body {
   font-family: Roboto Condensed;
 }
 
-#header {
-  background-color: black;
+.my-header {
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(44, 38, 38, 0.5);
+  height: 4rem;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+}
+
+.site-logo {
+  height: 4rem;
+  width: 6rem;
 }
 
 .slideshow-image-1 {
@@ -48,8 +69,9 @@ body {
 
 .hero-text h2 {
   font-size: 25px;
-  line-height: 36px;
+  line-height: 35px;
   margin: 0 0 60px;
+  font-weight: 600;
 }
 
 .hero-buttons {
@@ -87,5 +109,14 @@ body {
   position: absolute;
   top: 570px;
   height: 5rem;
+  width: 100%;
   z-index: 10;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
 }/*# sourceMappingURL=styles.css.map */
