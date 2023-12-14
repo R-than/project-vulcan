@@ -1,0 +1,30 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.nav-menu {
+    $height: 40px;
+    $border: 1px solid white;
+    background-color: transparent;
+    display: none;
+
+    ul {
+        @include flatten;
+        list-style: none;
+    }
+
+    a {
+        display: block;
+        line-height: $height;
+        border-top: $border;
+        color: $text-color-light;
+        text-align: left;
+        font-size: 1.2em;
+        text-decoration: none;
+        outline: none;
+
+        #{$link-hover-selector} {
+            background-color: $brand-color;
+        }
+    }
+
+}
