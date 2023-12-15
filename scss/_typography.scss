@@ -1,4 +1,12 @@
-@use "variables" as *;
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.hero-container {
+    font-family: $heading-font;
+}
+
+
 
 .nadias-section {
   margin: 0 auto;
@@ -11,3 +19,4 @@
   background-color: rgb(15, 33, 66);
   font-family: $brand-font;
 }
+

@@ -12,49 +12,72 @@
 
     <!-- *** IMPORTANT *** DO NOT DELETE OR EDIT THE NEXT LINE OF CODE - IT IS IMPORTANT FOR THE GULP BUILD PROCESS. SEE YOUR INSTRUCTOR FIRST IF YOU WANT TO EDIT OR DELETE THIS LINE -->
     <link rel="stylesheet" href="styles/styles.css?cachebuster=1" />
+
+    <script defer src="scripts/script.js"></script>
+
 	<link rel="stylesheet" href="styles/styles.css">
+
   </head>
   <body>
     <!-- the following code is written by Lexie -->
-    <header>
-      <img src="logo.jpg" alt="Your Logo" />
-      <button class="hamburger" id="hamburger">
-        <span class="hamburger-content">
-          <span class="bar"></span>
-        </span>
-      </button>
+    <header class="my-header">
+      <div class="header-wrapper">
+        <a href="index.html"
+          ><img class="site-logo" src="images/logo-white-vulcan.svg"
+        /></a>
+        <div id="hamburger-menu">
+          <div class="ham-bar bar-top"></div>
+          <div class="ham-bar bar-middle"></div>
+          <div class="ham-bar bar-bottom"></div>
+         </div>
+         <nav class="page-navigation">
+          <ul class="page-menu">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">PARTS</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">INSTALLATION MAP</a></li>
+            <li><a href="#">PRODUCT LITERATURE</a></li>
+          </ul>
+        </nav>
     </header>
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">PRODUCTS</a></li>
-          <li><a href="#">SERVICES</a></li>
-          <li><a href="#">PARTS</a></li>
-          <li><a href="#">NEWS</a></li>
-          <li><a href="#">CONTACT</a></li>
-          <li><a href="#">INSTALLATION MAP</a></li>
-          <li><a href="#">PRODUCT LITERATURE</a></li>
-        </ul>
-      </nav>
-    
-	<section class="hero">
-		<h1>WE DESIGN AND FABRICATE INDESTRUCTIBLE WASTEWATER SCREENS. ENOUGH SAID.</h1>
     <div class="hero-container">
-      <div class="hero-image">
-          <img src="images/header-slider-img-01.jpg" alt="Hero Image 1">
+      <div class="image-container">
+        <div class="slide">
+          <img
+            class="slideshow-image-1"
+            src="images/header-slider-img-01.jpg"
+          />
+        </div>
+        <div class="slide">
+          <img
+            class="slideshow-image-1"
+            src="images/header-slider-img-02.jpg"
+          />
+        </div>
+        <div class="slide">
+          <img
+            class="slideshow-image-1"
+            src="images/header-slider-img-03.jpg"
+          />
+        </div>
       </div>
-      <div class="hero-image">
-          <img src="images/header-slider-img-02.jpg" alt="Hero Image 2">
+      <div class="hero-text">
+        <h2>
+          WE DESIGN AND FABRICATE INDESTRUCTIBLE WASTEWATER SCREENS. ENOUGH
+          SAID.
+        </h2>
+        <ul class="hero-buttons">
+          <li class="button-p"><a href="#">VIEW PRODUCTS</a></li>
+          <li class="button-s"><a href="#">VIEW SERVICES</a></li>
+        </ul>
       </div>
-      <div class="hero-image">
-          <img src="images/header-slider-img-03.jpg" alt="Hero Image 3">
-      </div>
-   </div>
-		<button><a href="#">VIEW PRODUCTS</a></button>
-		<button><a href="#">VIEW SERVICES</a></button>
-	</section>
-	<img class="white-wave" alt="white wave page separation" src="images/wave-white.png">
-
+    </div>
+    <div class="border-break">
+      <img src="images/wave-white.png" />
+    </div>
 
     <!-- the following code is done by Nadia -->
     <!-- <section>
@@ -84,6 +107,7 @@
         <img src="images/map.jpg" width="600" alt="Map of United States" />
         <h1>Installed in a City Near You</h1>
         <button>Find a Vulcan Install</button>
+
       </div> -->
 
 
@@ -234,6 +258,163 @@
 	</div>
 </section>
 
+
+      <!-- the following code is done by Rathan -->
+      <section>
+        <h2>Customized Per Order</h2>
+        <p>
+          Just as no two treatment plants are the same, no two of our screening,
+          grit handling or sludge thickening products are either. We'll help
+          determine exactly what you need.
+        </p>
+        <div>
+          <img
+            src="/images/machine-01-300x274.png"
+            alt="machine 1"
+            srcset="
+              /images/machine-01-300x274.png  500w,
+              /images/machine-01-768x702.png  700w,
+              /images/machine-01-912x834.png 1000w
+            "
+          />
+          <h3>Screening</h3>
+        </div>
+        <div>
+          <img
+            src="/images/machine-02-300x274.png"
+            alt="machine 2"
+            srcset="
+              /images/machine-02-300x274.png  500w,
+              /images/machine-02-768x702.png  700w,
+              /images/machine-02-912x834.png 1000w
+            "
+          />
+          <h3>Screenings Handling</h3>
+        </div>
+        <div>
+          <img
+            src="/images/machine-03-300x274.png"
+            alt="machine 3"
+            srcset="
+              /images/machine-03-300x274.png  500w,
+              /images/machine-03-768x702.png  700w,
+              /images/machine-03-912x834.png 1000w
+            "
+          />
+          <h3>Grit Handling</h3>
+        </div>
+        <div>
+          <img
+            src="/images/machine-04-300x274.png"
+            alt="machine 4"
+            srcset="
+              /images/machine-04-300x274.png  500w,
+              /images/machine-04-768x702.png  700w,
+              /images/machine-04-912x834.png 1000w
+            "
+          />
+          <h3>Sludge Thickening</h3>
+        </div>
+      </section>
+
+      <section>
+        <h2>Product Advisor</h2>
+        <p>Find your project's perfect fit.</p>
+        <div>
+          <label for="product-type">Product Type</label>
+          <select name="select" id="product-type-fill">
+            <option value="select">Select</option>
+          </select>
+        </div>
+        <div>
+          <label for="screen-location">Screen Location</label>
+          <select name="select" id="screen-location-fill">
+            <option value="select">Select</option>
+          </select>
+        </div>
+        <div>
+          <label for="flow-type">Flow Type</label>
+          <select name="select" id="flow-type-fill">
+            <option value="select">Select</option>
+          </select>
+        </div>
+        <div>
+          <label for="channel-depth">Channel Depth</label>
+          <select name="select" id="channel-depth-fill">
+            <option value="select">Select</option>
+          </select>
+        </div>
+        <div>
+          <label for="channel-width">Channel Width</label>
+          <select name="select" id="channel-width-fill">
+            <option value="select">Select</option>
+          </select>
+        </div>
+        <button>
+          <a href="#">Find My Product</a>
+        </button>
+      </section>
+
+      <section>
+        <h3>Delivering Clean, safe water since 1975. Refreshing indeed.</h3>
+        <p>
+          Vulcan wastewater screening equipment has played a vital role in
+          protecting the water supply of more than 900 cities and communities
+          throughout the world.
+        </p>
+        <button>
+          <a href="#">About us</a>
+        </button>
+      </section>
+
+      <!-- the following code is done by Nadia -->
+      <section>
+        <div class="video">
+          <iframe
+            src="https://player.vimeo.com/video/183929811?h=46d7273d42&title=0&byline=0&portrait=0"
+            width="640"
+            height="360"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <p>
+            <a href="https://vimeo.com/183929811">Vulcan Industries</a> from
+            <a href="https://vimeo.com/paradigmcreativemedia"
+              >Paradigm Creative Media, Inc.</a
+            >
+            on <a href="https://vimeo.com">Vimeo</a>.
+          </p>
+        </div>
+
+        <div class="newsletter">
+          <h2>Stay in the know. Sign up for our newsletter.</h2>
+          <form>
+            <label for="email" class="enter-email"> Enter your email </label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+          </form>
+          <form>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+
+        <div class="card-1">
+          <img src="images/map.jpg" width="600" alt="Map of United States" />
+          <h2>Installed in a City Near You</h2>
+          <button>Find a Vulcan Install</button>
+        </div>
+
+        <div class="card-2">
+          <img src="images/wave-blue-dark.png" alt="Dark blue abstract wave" />
+          <h2>Ready to Spec Vulcan For Your Project?</h2>
+          <button>Contact Us</button>
+        </div>
+      </section>
 
 <footer>
 	<img src="images/logo-white-vulcan.svg" width="400" alt="White Vulcan Logo">
