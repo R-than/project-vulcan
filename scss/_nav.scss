@@ -2,3 +2,45 @@
 @use 'mixins' as *;
 
 
+.page-navigation {
+	position: absolute;
+	top: 4rem;
+	left: 0;
+	right: 0;
+	background-color: rgba(44, 38, 38, 0.5);
+	height: 0;
+	overflow: hidden;
+	transition: all 0.3s ease-in-out;
+	font-family: $body-font;
+
+	&.show-menu {
+		height: 16.5rem;
+	}
+   }
+
+   .page-menu {
+	list-style-type: none;
+	padding: 0;
+   }
+   
+   .page-menu li {
+	font-size: 17px;
+	letter-spacing: 0;
+	line-height: 15px;
+	display: block;
+	padding: 0.5rem 1rem;
+
+	&:hover {
+		background-color: $brand-color;
+	}
+
+	a {
+		color: $text-color-light;
+		text-decoration: none;
+
+	
+		
+	}
+	
+   }
+

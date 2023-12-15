@@ -1,7 +1,6 @@
 const slides = document.querySelectorAll('.slide');
-var currentSlide = 0;
+let currentSlide = 0;
 
-// Show the first slide immediately
 slides[currentSlide].classList.add('active');
 
 function showSlide() {
@@ -11,3 +10,12 @@ function showSlide() {
 }
 
 setInterval(showSlide, 3000);
+
+
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const nav = document.getElementsByClassName('page-navigation')[0];
+
+hamburgerMenu.addEventListener('click', () => {
+  hamburgerMenu.classList.toggle('show-menu');
+  nav.classList.toggle('show-menu');
+});

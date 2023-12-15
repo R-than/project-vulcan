@@ -9,10 +9,11 @@
 	align-items: center;
 	width: 100%;
 	background-color: rgba(44, 38, 38, 0.5);
-    height: 4rem;
+    height: 2.5rem;
 }
  
 .header-wrapper {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -26,7 +27,35 @@
 	width: 6rem;
 }
 
+// TABLET
+@media screen and (min-width: 37.5em) {
+	.header-wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		align-items: center;
+		justify-content: space-around;
+		margin: 0 auto;
+		top: 7rem;
+		width: 60%;
+		padding: 4rem;
+		background-color: rgba(44, 38, 38, 0.5);
+	}
 
-// @media (max-width: 760px) {
-    
-// }
+	.my-header {
+		position: absolute;
+		top: 0;
+		background-color: transparent;
+	}
+
+	.site-logo {
+		display: none;
+	}
+}
+
+// DESKTOP
+
+@media screen and (min-width: 68.75em) {
+
+}
