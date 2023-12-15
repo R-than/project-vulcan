@@ -12,6 +12,7 @@
 
     <!-- *** IMPORTANT *** DO NOT DELETE OR EDIT THE NEXT LINE OF CODE - IT IS IMPORTANT FOR THE GULP BUILD PROCESS. SEE YOUR INSTRUCTOR FIRST IF YOU WANT TO EDIT OR DELETE THIS LINE -->
     <link rel="stylesheet" href="styles/styles.css?cachebuster=1" />
+	<link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <!-- the following code is written by Lexie -->
@@ -56,7 +57,7 @@
 
 
     <!-- the following code is done by Nadia -->
-    <section>
+    <!-- <section>
       <div class="video">
         <video>
           <a href="https://vimeo.com/183929811"></a>
@@ -83,93 +84,101 @@
         <img src="images/map.jpg" width="600" alt="Map of United States" />
         <h1>Installed in a City Near You</h1>
         <button>Find a Vulcan Install</button>
-      </div>
-=======
+      </div> -->
+
 
 <!-- the following code is done by Rathan -->
-<section>
+<div class="machine-text">
 	<h2>Customized Per Order</h2>
 	<p>Just as no two treatment plants are the same, no two of our screening, grit handling or sludge thickening products are either. We'll help determine exactly what you need. </p>
-	<div>
+</div>
+<section class="machine">
+	
 		<img src="/images/machine-01-300x274.png" 
 			 alt="machine 1"
-			 srcset="/images/machine-01-300x274.png 500w,
-			 		 /images/machine-01-768x702.png 700w,
+			 srcset="/images/machine-01-300x274.png 600w,
+			 		 /images/machine-01-768x702.png 900w,
 			 		 /images/machine-01-912x834.png 1000w">
-		<h3>Screening</h3>
-	</div>
-	<div>
+		<h3 class="screening">Screening</h3>
+		<a class="view" href="#">View Selection</a>
+	
 		<img src="/images/machine-02-300x274.png" 
 			 alt="machine 2"
 			 srcset="/images/machine-02-300x274.png 500w,
 			 		 /images/machine-02-768x702.png 700w,
 			 		 /images/machine-02-912x834.png 1000w">
-		<h3>Screenings Handling</h3>
-	</div>
-	<div>
+		<h3 class="screen-hand">Screenings Handling</h3>
+		<a class="view" href="#">View Selection</a>
+	
 		<img src="/images/machine-03-300x274.png" 
 			 alt="machine 3"
 			 srcset="/images/machine-03-300x274.png 500w,
 			 		 /images/machine-03-768x702.png 700w,
 			 		 /images/machine-03-912x834.png 1000w">
-		<h3>Grit Handling</h3>
-	</div>
-	<div>
+		<h3 class="grit">Grit Handling</h3>
+		<a class="view" href="#">View Selection</a>
+	
 		<img src="/images/machine-04-300x274.png" 
 			 alt="machine 4"
 			 srcset="/images/machine-04-300x274.png 500w,
 			 		 /images/machine-04-768x702.png 700w,
 			 		 /images/machine-04-912x834.png 1000w">
 		<h3>Sludge Thickening</h3>
-	</div>
+		<a class="view" href="#">View Selection</a>
+		
+	
 </section>
 
-<section>
-	<h2>Product Advisor</h2>
-	<p>Find your project's perfect fit.</p>
-	<div>
-		<label for="product-type">Product Type</label>
-		<select name="select" id="product-type-fill">
-			<option value="select">Select</option>
-		</select>
-	</div>
-	<div>
-		<label for="screen-location">Screen Location</label>
-		<select name="select" id="screen-location-fill">
-			<option value="select">Select</option>
-		</select>
-	</div>
-	<div>
-		<label for="flow-type">Flow Type</label>
-		<select name="select" id="flow-type-fill">
-			<option value="select">Select</option>
-		</select>
-	</div>
-	<div>
-		<label for="channel-depth">Channel Depth</label>
-		<select name="select" id="channel-depth-fill">
-			<option value="select">Select</option>
-		</select>
-	</div>
-	<div>
-		<label for="channel-width">Channel Width</label>
-		<select name="select" id="channel-width-fill">
-			<option value="select">Select</option>
-		</select>
-	</div>
-	<button>
-		<a href="#">Find My Product</a>
-	</button>
+<div class="advisor">
+	<img class="blue-wave" src="images/wave-blue-dark.png" alt="Dark blue abstract wave">
 
-</section>
+	<div class="question-wrapper">
+		<section class="question">
+			<h2>Product Advisor</h2>
+			<p>Find your project's perfect fit.</p>
+			<div>
+				<label for="product-type">Product Type</label>
+				<select class="product-type-fill" name="select" id="product-type-fill">
+					<option value="select">Select</option>				
+				</select>
+			
+				<label class="screen-loc" for="screen-location">Screen Location</label>
+				<select class="screen-loc-fill" name="select" id="screen-location-fill">
+					<option value="select">Select</option>
+				</select>
+			
+				<label class="flow-type" for="flow-type">Flow Type</label>
+				<select class="flow-type-fill" name="select" id="flow-type-fill">
+					<option value="select">Select</option>
+				</select>
+			
+				<label class="channel-depth" for="channel-depth">Channel Depth</label>
+				<select class="channel-depth-fill" name="select" id="channel-depth-fill">
+					<option value="select">Select</option>
+				</select>
+			
+				<label for="channel-width">Channel Width</label>
+				<select class="channel-width-fill" name="select" id="channel-width-fill">
+					<option value="select">Select</option>
+				</select>
+			</div>
+			<button class="question-button">
+				<a href="#">Find My Product</a>
+			</button>
 
-<section>
-	<h3>Delivering Clean, safe water since 1975. Refreshing indeed.</h3>
-	<p>Vulcan wastewater screening equipment has played a vital role in protecting the water supply of more than 900 cities and communities throughout the world.</p>
-	<button>
-		<a href="#">About us</a>
-	</button>
-</section>
+		</section>
+	</div>
+</div>
+
+<div class="about-us-container">
+	<section class="about-us">
+		<h3>Delivering Clean, safe water since 1975. Refreshing indeed.</h3>
+		<p>Vulcan wastewater screening equipment has played a vital role in protecting the water supply of more than 900 cities and communities throughout the world.</p>
+		<button class="about-us-button">
+			<a href="#">About us</a>
+		</button>
+	</section>
+</div>
 
 
 
@@ -190,12 +199,14 @@
 
 
 <!-- the following code is done by Nadia -->
+
 <section class="nadias-section">
 	<div class="video-container">
 			<iframe class="video" src="https://player.vimeo.com/video/183929811?h=46d7273d42&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 		</div>
 		
 	</div>
+
 
 	<div class="newsletter">
 		<h2 class="n-h2">Stay in the know. Sign up for our newsletter.</h2>
