@@ -9,9 +9,9 @@ function showSlide() {
  slides[currentSlide].classList.add('active');
 }
 
-setInterval(showSlide, 3000);
+setInterval(showSlide, 4000);
 
-
+// HAMBURGER MENU
 const hamburgerMenu = document.getElementById('hamburger-menu');
 const nav = document.getElementsByClassName('page-navigation')[0];
 

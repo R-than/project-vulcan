@@ -16,13 +16,29 @@
 	&.show-menu {
 		height: 16.5rem;
 	}
+
+	@media screen and (min-width: 600px){
+		height: auto;
+		width: fit-content;
+		margin: 0 auto;
+	}
+
    }
 
    .page-menu {
 	list-style-type: none;
 	padding: 0;
+
+	@media screen and (min-width: 600px){
+		display: flex;
+
+		div {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
    }
-   
+}
    .page-menu li {
 	font-size: 17px;
 	letter-spacing: 0;

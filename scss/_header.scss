@@ -2,7 +2,7 @@
 @use 'mixins' as *;
 
 .my-header {
-	position: fixed;
+	position: absolute;
 	z-index: 100;
 	display: flex;
 	justify-content: space-between;
@@ -28,7 +28,7 @@
 }
 
 // TABLET
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 600px) {
 	.header-wrapper {
 		position: relative;
 		display: flex;
@@ -38,9 +38,7 @@
 		justify-content: space-around;
 		margin: 0 auto;
 		top: 7rem;
-		width: 60%;
-		padding: 4rem;
-		background-color: rgba(44, 38, 38, 0.5);
+		
 	}
 
 	.my-header {
