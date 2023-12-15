@@ -19,11 +19,51 @@ table {
 
 body {
   margin: 0;
+
 }
 
 .hero-container {
   font-family: Roboto Condensed;
 }
+
+
+}
+
+.nadias-section {
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgb(15, 33, 66);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.video-container {
+  background-color: #0693e3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 500px;
+  max-width: 100%;
+  display: flex;
+}
+
+.video {
+  margin: 0 auto;
+  position: relative;
+  align-items: center;
+  border: 5px teal;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.newsletter {
+  background-color: #8ed1fc;
+
+  
+
 
 .my-header {
   position: fixed;
@@ -152,6 +192,7 @@ body {
   text-decoration: none;
 }
 
+
 .button-p {
   border: 1px solid white;
   line-height: 20px;
@@ -276,4 +317,10 @@ body {
   #hamburger-menu {
     display: none;
   }
+
+.nav-menu a:hover, .nav-menu a:focus, .nav-menu a:active {
+  background-color: #429BD6;
+
+
+
 }/*# sourceMappingURL=styles.css.map */
