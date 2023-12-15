@@ -1,6 +1,21 @@
+
 @use 'variables' as *;
 @use 'mixins' as *;
 
 .hero-container {
     font-family: $heading-font;
 }
+
+
+
+.nadias-section {
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  font-weight: 400;
+  font-style: normal;
+  font-family: $brand-font;
+}
+
