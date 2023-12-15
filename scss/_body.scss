@@ -1,26 +1,429 @@
-
 @use "variables" as *;
+
+body {
+  font-family: $brand-font;
+}
+
+section {
+  display: block;
+}
+
+button {
+  display: inline-block;
+}
 
 .video-container {
   background-color: $vulcan-blue;
-  object-fit: cover;
   height: 500px;
   max-width: 100%;
   display: flex;
 }
 
 .video {
-  margin: 0 auto;
-  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
   align-items: center;
-  //   FIX BORDER.. MAKE IT WORK SOMEHOW
-  border: 5px teal;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
+  width: 100%;
+  height: 80%;
+  border: solid 10px #244a64;
 }
 
-.newsletter {
+.forms {
+  display: flex;
+}
+
+.newsletter-container {
   background-color: $vulcan-light-blue;
+  padding: 1.2rem;
+  position: relative;
+  padding-bottom: 2rem;
 }
 
+.newsletter-container label {
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #244a64;
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: center;
+}
 
+.enter-label {
+  visibility: hidden;
+}
+
+.enter-email {
+  width: 100%;
+  height: 30px;
+  display: block;
+  padding-left: 1rem;
+  justify-content: left;
+  align-items: center;
+  border: none;
+  padding: 0.7rem;
+}
+
+.submit {
+  background-color: $vulcan-blue;
+  border: none;
+  position: relative;
+  bottom: 15px;
+  color: white;
+  justify-content: right;
+  text-align: center;
+  width: 100px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.enter-label {
+  visibility: hidden;
+}
+
+.grids {
+  display: block;
+}
+
+.card-1 {
+  display: block;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card-1-text {
+  position: absolute;
+  z-index: 500;
+  top: 20%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 80%;
+  line-height: normal;
+  color: #504f4f;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.install-button {
+  position: absolute;
+  border: 1px solid #504f4f;
+  background-color: transparent;
+  z-index: 500;
+  bottom: 25%;
+  left: 0;
+  right: 0;
+  width: 240px;
+  height: 50px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 750;
+  padding: 0.5rem;
+  color: #2b2b2b;
+  font-size: 1.1rem;
+  line-height: normal;
+  margin: 0 auto;
+  object-fit: fill;
+  margin-top: 1rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-1 img {
+  width: 100%;
+  position: relative;
+}
+
+.card-2 {
+  display: block;
+  position: relative;
+}
+
+.dark-wave-container {
+  display: flex;
+  position: relative;
+  background-color: #154a66;
+}
+
+.dark-wave-container img {
+  width: 100%;
+  height: 40vh;
+  margin: 0;
+  position: relative;
+  z-index: 300;
+}
+
+.card-2-text {
+  position: absolute;
+  z-index: 500;
+  top: 20%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  max-width: 100%;
+  height: 10%;
+  line-height: normal;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-button {
+  position: absolute;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  z-index: 500;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  width: 240px;
+  height: 50px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 750;
+  padding: 0.5rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: normal;
+  margin: 0 auto;
+  object-fit: fill;
+  margin-top: 1rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.light-blue-wave img {
+  position: relative;
+  z-index: 2000;
+  bottom: 30px;
+  height: 3rem;
+  width: 100%;
+}
+
+footer {
+  background-color: #009ddc;
+  width: 100%;
+  height: 30vh;
+  position: absolute;
+}
+
+.logo {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  left: 0;
+  display: block;
+  z-index: 1000;
+}
+
+.footer-container {
+  display: block;
+  position: absolute;
+  justify-content: space-between;
+}
+
+.contact-us {
+  display: inline-block;
+}
+
+.footer-container a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.contact-us svg,
+.phone svg {
+  filter: invert(100%);
+}
+
+.phone {
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 1rem;
+  margin-right: 1rem;
+}
+
+.contact-us {
+  justify-content: space-between;
+  text-align: right;
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  vertical-align: middle;
+  padding: 1rem;
+  margin-right: 1rem;
+  max-width: 100%;
+}
+
+.facebook {
+  display: block;
+  position: absolute;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.linkedin {
+  display: block;
+  text-align: right;
+  margin-left: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.contact-info-container {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.copyright {
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (min-width: 600px) {
+  // form .newsletter-container {
+  //   background-color: $vulcan-light-blue;
+  //   padding-top: 23px;
+  //   padding-bottom: 23px;
+  //   margin: auto;
+  //   padding-left: 1rem;
+  //   padding-right: 1rem;
+  //   position: relative;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+
+  // .row-1 {
+  //   position: relative;
+  // }
+
+  // .newsletter-container label {
+  //   line-height: normal;
+  //   color: #244a64;
+  //   font-weight: 300;
+  //   font-size: 1.7rem;
+  //   display: block;
+  //   max-width: 100%;
+  //   margin: 0 auto;
+  //   text-align: center;
+  //   margin-bottom: 1rem;
+  // }
+
+  // .submit {
+  //   width: 95px;
+  //   float: right;
+  //   padding: 8px;
+  //   font-size: 1.1rem;
+  //   line-height: 17px;
+  //   font-weight: 700;
+  //   background-color: $vulcan-blue;
+  //   border: none;
+  //   color: white;
+  //   text-transform: uppercase;
+  // }
+
+  // .email-input {
+  //   overflow: hidden;
+  //   display: block;
+  // }
+
+  // .enter-email {
+  //   font-size: 1rem;
+  //   line-height: normal;
+  //   height: auto;
+  //   display: block;
+  //   position: relative;
+  //   width: 100%;
+  //   padding: 2rem;
+  // }
+
+  .install-button {
+    bottom: 40%;
+    background-color: $vulcan-blue;
+    border: none;
+    color: white;
+  }
+
+  .contact-button {
+    bottom: 60%;
+    background-color: $vulcan-blue;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    width: 15%;
+    text-align: left;
+    justify-content: left;
+    margin: 0;
+  }
+
+  .card-1-text {
+    font-size: 2.5rem;
+  }
+
+  .grids {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .card-2 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .contact-button {
+    bottom: 25%;
+  }
+
+  .card-2-text {
+    font-size: 2.5rem;
+    top: 30%;
+  }
+
+  .card-1 img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// to do:
+// fix footer
+// make another media query for 1530px for dark blue wave image and others
+// fix forms (submit and email)
+// fix video border
