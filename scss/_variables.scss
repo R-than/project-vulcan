@@ -1,8 +1,10 @@
 @use "sass:math";
 
 // BRAND COLOURS
+
 $brand-color: #429bd6;
 $secondary-brand-color: #244a64;
+
 
 // TEXT COLOURS
 $text-color-dark: black;
@@ -13,9 +15,28 @@ $link-hover-selector: "&:hover, &:focus, &:active";
 
 // COLORS
 $brand-color: #429bd6;
+
 $secondary-color: #244a64;
 $vulcan-blue: #429bd6;
 $vulcan-light-blue: #bedcef;
 
 // TYPOGRAPHY
 $brand-font: "Roboto Condensed", sans-serif;
+
+
+
+// TYPOGRAPHY
+$body-font: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
+$heading-font: Roboto Condensed;
+
+$secondary-color: #244963;
+
+
+$vulcan-blue: #0693e3;
+$vulcan-light-blue: #8ed1fc;
+
+
+
+
+
+
