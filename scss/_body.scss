@@ -35,6 +35,7 @@ p {
     margin: 0 1rem 3rem;
     padding: 1rem 0;
     gap: 1rem;
+    margin-bottom: 5rem;
         
     
 
@@ -91,10 +92,6 @@ p {
 }
 
 .machine-text {
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: 1fr 1fr;
-    // margin: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -110,10 +107,6 @@ p {
 }
 
 .machine-text h2 {
-    // width: 100%;
-    // place-items: center;
-    // align-items: center;
-    // grid-column: span;
     grid-column: 2/3;
     margin: 0;
     font-size: 30px;
