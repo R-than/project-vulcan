@@ -25,27 +25,21 @@ body {
   font-family: Roboto Condensed;
 }
 
-
 .nadias-section {
   margin: 0 auto;
   font-size: 1rem;
   line-height: 1.5;
   color: rgb(255, 255, 255);
-
-.my-header {
-  position: absolute;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   width: 100%;
   font-weight: 400;
   font-style: normal;
   font-family: "Roboto Condensed", sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "roboto condensed";
 }
 
@@ -67,17 +61,18 @@ p {
 .machine {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 0 1rem 3rem;
+  margin: 0 1rem;
   padding: 1rem 0;
   gap: 1rem;
-  margin-bottom: 5rem;
   text-align: center;
   align-items: center;
   place-items: center;
 }
+
 .machine a {
   display: none;
 }
+
 @media (min-width: 37.5em) {
   .machine {
     display: grid;
@@ -110,12 +105,19 @@ p {
     margin-top: 0;
   }
 }
-
 .machine-text {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 0 3rem;
+}
+
+@media (min-width: 37.5em) {
+  .machine-text {
+    font-size: 1.3rem;
+    border-bottom: transparent;
+    padding-bottom: 1rem;
+  }
 }
 @media (min-width: 37.5em) {
   .machine-text {
@@ -124,7 +126,6 @@ p {
     padding-bottom: 1rem;
   }
 }
-
 .machine-text h2 {
   grid-column: 2/3;
   margin: 0;
@@ -134,6 +135,7 @@ p {
   text-transform: uppercase;
   color: #555;
 }
+
 @media (min-width: 37.5em) {
   .machine-text h2 {
     color: #244963;
@@ -147,7 +149,6 @@ p {
     font-size: 45px;
   }
 }
-
 .machine-text p {
   display: block;
   grid-column: 2/3;
@@ -157,13 +158,13 @@ p {
   border-bottom: 1px solid black;
   padding-bottom: 1rem;
 }
+
 @media (min-width: 68.75em) {
   .machine-text p {
     font-size: 17px;
     padding: 0 5rem;
   }
 }
-
 .machine h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -184,6 +185,7 @@ p {
   padding: 1rem 1rem;
   margin-top: 0;
 }
+
 .advisor {
   position: relative;
   display: block;
@@ -208,35 +210,24 @@ p {
   padding-top: 2rem;
   margin-top: 0;
 }
+
 @media (min-width: 37.5em) {
   .question h2 {
-    font-size: 2.4rem;
-    margin-bottom: 0;
-  }
-}
-
-.question p {
-  color: white;
-  border-bottom: 1px solid white;
-  padding-bottom: 2rem;
-  margin-bottom: 0.5rem;
-}
-@media (min-width: 37.5em) {
-  .question p {
     font-size: 1.4rem;
     color: #429bd6;
     margin-top: 0.5rem;
   }
 }
-
 .question div {
   display: grid;
   grid-template-columns: 1fr;
   padding: 1rem 0;
 }
+
 @media (min-width: 37.5em) {
   .question div {
     grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 1rem;
     column-gap: 1rem;
   }
   .question div .product-type-fill {
@@ -288,7 +279,6 @@ p {
     grid-column: 5/6;
   }
 }
-
 .question label {
   color: white;
   padding: 0.5rem 0;
@@ -337,24 +327,24 @@ p {
   text-align: center;
   color: white;
 }
+
 @media (min-width: 37.5em) {
   .about-us h3 {
     font-size: 3rem;
   }
 }
-
 .about-us p {
   color: white;
   display: block;
   padding: 0 50px 60px;
   margin: 0;
 }
+
 @media (min-width: 37.5em) {
   .about-us p {
     padding: 0 175px 60px;
   }
 }
-
 .about-us {
   display: grid;
   grid-template-columns: 1fr;
@@ -394,26 +384,37 @@ button {
 }
 
 .video-container {
-  background-color: #0693e3;
-  height: 500px;
-  max-width: 100%;
   display: flex;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
 }
 
-.video {
-  display: block;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
+.video-section {
+  background-color: #0693e3;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+iframe {
+  overflow: hidden;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 80%;
-  border: solid 10px #244a64;
+  height: 100%;
 }
 
 .forms {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .newsletter-container {
@@ -421,6 +422,8 @@ button {
   padding: 1.2rem;
   position: relative;
   padding-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .newsletter-container label {
@@ -428,18 +431,21 @@ button {
   align-items: center;
   margin: 0 auto;
   color: #244a64;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.2rem;
   text-align: center;
 }
 
 .enter-label {
   visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
 }
 
 .enter-email {
-  width: 100%;
   height: 30px;
+  width: 100%;
   display: block;
   padding-left: 1rem;
   justify-content: left;
@@ -451,23 +457,21 @@ button {
 .submit {
   background-color: #0693e3;
   border: none;
-  position: relative;
-  bottom: 15px;
   color: white;
   justify-content: right;
   text-align: center;
-  width: 100px;
+  width: 100%;
+  padding: 0.8rem;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-.enter-label {
-  visibility: hidden;
+  font-weight: 600;
+  font-size: 0.7rem;
+  flex-basis: 30px;
 }
 
 .grids {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .card-1 {
@@ -514,6 +518,7 @@ button {
   font-size: 1.1rem;
   line-height: normal;
   margin: 0 auto;
+  -o-object-fit: fill;
   object-fit: fill;
   margin-top: 1rem;
   text-align: center;
@@ -529,20 +534,8 @@ button {
 .card-2 {
   display: block;
   position: relative;
-}
-
-.dark-wave-container {
-  display: flex;
-  position: relative;
   background-color: #154a66;
-}
-
-.dark-wave-container img {
   width: 100%;
-  height: 40vh;
-  margin: 0;
-  position: relative;
-  z-index: 300;
 }
 
 .card-2-text {
@@ -569,7 +562,7 @@ button {
   border: 1px solid #ffffff;
   background-color: transparent;
   z-index: 500;
-  bottom: 50%;
+  bottom: 20%;
   left: 0;
   right: 0;
   width: 240px;
@@ -582,11 +575,22 @@ button {
   font-size: 0.9rem;
   line-height: normal;
   margin: 0 auto;
+  -o-object-fit: fill;
   object-fit: fill;
   margin-top: 1rem;
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.install-button a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+.contact-button a {
+  color: white;
+  text-decoration: none;
 }
 
 .light-blue-wave img {
@@ -608,6 +612,7 @@ footer {
   position: relative;
   width: 30%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   margin: 0 auto;
   justify-content: center;
@@ -641,13 +646,12 @@ footer {
 
 .phone {
   justify-content: center;
-  width: 100%;
+  width: 60%;
+  font-size: 0.8rem;
   position: absolute;
-  display: inline-block;
   vertical-align: middle;
   text-align: center;
-  padding: 1rem;
-  margin-right: 1rem;
+  padding-left: 4rem;
 }
 
 .contact-us {
@@ -656,17 +660,17 @@ footer {
   display: inline-block;
   width: 100%;
   position: absolute;
+  font-size: 0.8rem;
   vertical-align: middle;
-  padding: 1rem;
   margin-right: 1rem;
   max-width: 100%;
 }
 
 .facebook {
-  display: block;
+  display: inline-block;
   position: absolute;
   text-align: left;
-  margin-left: 2rem;
+  margin-left: 0.2rem;
 }
 
 .linkedin {
@@ -691,12 +695,72 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 1rem;
+  top: 0;
+  margin-top: 12rem;
 }
 
+@media (min-width: 1000px) {
+  .contact-info-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+  }
+  .facebook {
+    text-align: left;
+    padding-left: 6rem;
+    position: absolute;
+    left: 38%;
+  }
+  .linkedin {
+    text-align: left;
+    padding-left: 6rem;
+    position: absolute;
+    left: 40%;
+  }
+  .phone {
+    position: absolute;
+    left: 39%;
+  }
+  .contact-us {
+    position: absolute;
+    right: 3%;
+  }
+  .logo {
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 1700px) {
+  .facebook {
+    text-align: left;
+    padding-left: 6rem;
+    position: absolute;
+    left: 73%;
+  }
+  .linkedin {
+    text-align: left;
+    padding-left: 6rem;
+    position: absolute;
+    left: 75%;
+  }
+  .phone {
+    position: absolute;
+    left: 80%;
+    width: 30%;
+    display: block;
+  }
+  .contact-us {
+    position: absolute;
+    left: 10%;
+  }
+  .logo {
+    padding-left: 2rem;
+  }
+}
 @media (min-width: 600px) {
   .install-button {
-    bottom: 40%;
+    bottom: 20%;
     background-color: #0693e3;
     border: none;
     color: white;
@@ -707,6 +771,12 @@ footer {
     border: none;
     color: white;
     font-size: 1.2rem;
+    width: 50%;
+  }
+  .contact-button a,
+  .install-button a {
+    color: white;
+    text-decoration: none;
   }
   .logo {
     width: 15%;
@@ -715,7 +785,7 @@ footer {
     margin: 0;
   }
   .card-1-text {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
   }
   .grids {
     display: grid;
@@ -730,16 +800,63 @@ footer {
     bottom: 25%;
   }
   .card-2-text {
-    font-size: 2.5rem;
-    top: 30%;
+    font-size: 1.2rem;
+    top: 10%;
   }
   .card-1 img {
-    width: 100%;
     height: 100%;
+  }
+  .card-2 {
+    background-color: #154a66;
+    padding: 4rem;
+  }
+}
+@media (min-width: 800px) {
+  .card-2-text {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1000px) {
+  .video-container {
+    display: flex;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: auto;
+  }
+  .video-section {
+    background-color: #0693e3;
+    padding: 2rem;
+    max-height: 600px;
+  }
+  iframe {
+    overflow: hidden;
+    display: inline-block;
+    background-color: green;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    margin: 0 auto;
+    width: 80%;
+    max-height: 350px;
+  }
+  .contact-button {
+    bottom: 40%;
+    width: 40%;
+    font-size: 1.6rem;
+  }
+  .card-2-text,
+  .card-1-text {
+    font-size: 2.2rem;
+  }
+  .install-button {
+    bottom: 27%;
   }
 }
 .my-header {
-  position: fixed;
+  position: absolute;
   z-index: 100;
   display: flex;
   justify-content: space-between;
@@ -832,23 +949,26 @@ footer {
   transition: all 0.3s ease-in-out;
   font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
 }
+
 .page-navigation.show-menu {
   height: 16.5rem;
 }
+
 @media screen and (min-width: 600px) {
   .page-navigation {
     height: auto;
+    width: -moz-fit-content;
     width: fit-content;
     margin-bottom: 5rem;
     padding: 0.5rem;
     position: relative;
   }
 }
-
 .page-menu {
   list-style-type: none;
   padding: 0;
 }
+
 @media screen and (min-width: 600px) {
   .page-menu {
     display: flex;
@@ -857,7 +977,6 @@ footer {
     display: none;
   }
 }
-
 .page-menu li {
   font-size: 17px;
   letter-spacing: 0;
@@ -865,15 +984,18 @@ footer {
   display: block;
   padding: 0.5rem 1rem;
 }
+
 .page-menu li:hover {
   background-color: #429bd6;
 }
+
 .page-menu li a {
   color: white;
   text-decoration: none;
 }
 
 .slideshow-image-1 {
+  -o-object-fit: cover;
   object-fit: cover;
   position: relative;
   width: 100%;
@@ -936,6 +1058,7 @@ footer {
 
 @media screen and (min-width: 600px) {
   .slideshow-image-1 {
+    -o-object-fit: cover;
     object-fit: cover;
     position: relative;
     width: 100%;
@@ -1007,6 +1130,7 @@ footer {
   top: 0;
   margin-top: 0.3rem;
 }
+
 .show-menu .ham-bar:nth-child(1) {
   top: 0.5rem;
   transform: rotate(45deg);
@@ -1016,6 +1140,7 @@ footer {
   top: 50%;
   transform: translateY(-50%);
 }
+
 .show-menu .ham-bar:nth-child(2) {
   width: 0;
 }
@@ -1024,6 +1149,7 @@ footer {
   bottom: 0;
   margin-bottom: 0.3rem;
 }
+
 .show-menu .ham-bar:nth-child(3) {
   transform: rotate(-45deg);
   top: 0.8rem;
@@ -1033,6 +1159,6 @@ footer {
   #hamburger-menu {
     display: none;
   }
-}
+} 
 
 /*# sourceMappingURL=styles.css.map */
