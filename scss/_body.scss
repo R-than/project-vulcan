@@ -1,327 +1,310 @@
-
 @use "variables" as *;
 @use "mixins" as *;
 
 //Rathan Code
 
-h1,h2,h3,h4 {
-    font-family: 'roboto condensed';
+h1,
+h2,
+h3,
+h4 {
+  font-family: "roboto condensed";
 }
 
 h2 {
-    text-align: center;    
-    font-size: 2rem;
-    
+  text-align: center;
+  font-size: 2rem;
 }
 
 a {
-    font-family: "Roboto", "Helvetica Neue", "Helvetica";
+  font-family: "Roboto", "Helvetica Neue", "Helvetica";
 }
 
 p {
-    text-align: center;   
-    font-size: 1rem;
-    font-family: "Roboto", "Helvetica Neue", "Helvetica";
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica";
 }
-
 
 //machine section------------------------------------------------
 
-
 .machine {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 1rem;
+  padding: 1rem 0;
+  gap: 1rem;
+
+  // border-: 1px solid black;
+
+  text-align: center;
+  align-items: center;
+  place-items: center;
+
+  a {
+    display: none;
+  }
+
+  @include mq(37.5em) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 1rem;
-    padding: 1rem 0;
-    gap: 1rem;
-        
-    // border-: 1px solid black;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: none;
+    margin-bottom: 5rem;
 
-    text-align: center;
-    align-items: center;
-    place-items: center;
-    
+    h3 {
+      color: $brand-color;
+      font-size: 1.8rem;
+      margin-bottom: 0;
+    }
+
     a {
-        display: none;
+      display: block;
+      color: $text-color-dark;
     }
-    
-    @include mq(37.5em) {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        border-top: none;
-        margin-bottom: 5rem;
 
-        h3 {
-            color: $brand-color;
-            font-size: 1.8rem;
-            margin-bottom: 0;
-        }
-
-        a {
-            display: block;
-            color: $text-color-dark;
-        }
-
-        .screening {
-            grid-row: 2/3;
-        }
-
-        .screen-hand {
-            grid-row: 2/3;
-            grid-column: 2/3;
-        }
-
-        .grit {
-            grid-row: 2/3;
-            grid-column: 3/4;
-        }
-
-        .view {
-            grid-row: 3/4;
-            margin-top: 0;
-            
-        }
+    .screening {
+      grid-row: 2/3;
     }
+
+    .screen-hand {
+      grid-row: 2/3;
+      grid-column: 2/3;
+    }
+
+    .grit {
+      grid-row: 2/3;
+      grid-column: 3/4;
+    }
+
+    .view {
+      grid-row: 3/4;
+      margin-top: 0;
+    }
+  }
 }
 
 .machine-text {
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: 1fr 1fr;
-    // margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 3rem;
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: 1fr 1fr;
+  // margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 3rem;
 
-    @include mq(37.5em) {
-        font-size: 1.3rem;
-        border-bottom: transparent;
-        padding-bottom: 1rem ;
-    }
-
-    
+  @include mq(37.5em) {
+    font-size: 1.3rem;
+    border-bottom: transparent;
+    padding-bottom: 1rem;
+  }
 }
 
 .machine-text h2 {
-    // width: 100%;
-    // place-items: center;
-    // align-items: center;
-    // grid-column: span;
-    grid-column: 2/3;
-    margin: 0;
-    font-size: 30px;
-    line-height: 28px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #555;
+  // width: 100%;
+  // place-items: center;
+  // align-items: center;
+  // grid-column: span;
+  grid-column: 2/3;
+  margin: 0;
+  font-size: 30px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #555;
 
-    @include mq(37.5em) {
-        color: $secondary-color;
-        font-size: 35px;
-        border-bottom: transparent;
-        padding-bottom: 1rem ;
-    }
-    
-    @include mq(68.75em) {
-        font-size: 45px;
-    }
+  @include mq(37.5em) {
+    color: $secondary-color;
+    font-size: 35px;
+    border-bottom: transparent;
+    padding-bottom: 1rem;
+  }
+
+  @include mq(68.75em) {
+    font-size: 45px;
+  }
 }
 
 .machine-text p {
-    display: block;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    overflow: auto;
-    font-size: 14px;
+  display: block;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  overflow: auto;
+  font-size: 14px;
 
-    @include mq(68.75em) {
-        font-size: 17px;
-        padding: 0 5rem;
-    }
+  @include mq(68.75em) {
+    font-size: 17px;
+    padding: 0 5rem;
+  }
 }
 
 .machine h2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    place-items: center;
-    grid-column: span;
-
-
-    
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  place-items: center;
+  grid-column: span;
 }
 
 .blue-wave {
-    // margin-bottom: 0;
-    height: 8rem;
-    // width: fit-content;
-    // transform: scale(110%);
-    width: 100%;
-    // height: auto;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    
-    
+  // margin-bottom: 0;
+  height: 8rem;
+  // width: fit-content;
+  // transform: scale(110%);
+  width: 100%;
+  // height: auto;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .question-wrapper {
-    background-color: $secondary-color;
-    padding: 1rem 1rem;
-    // width: 100%;
-    // min-height: auto;
-    margin-top: 0;
+  background-color: $secondary-color;
+  padding: 1rem 1rem;
+  // width: 100%;
+  // min-height: auto;
+  margin-top: 0;
 
-    @include mq(68.75em) {
-        // padding: 0 1rem;
-    }
+  @include mq(68.75em) {
+    // padding: 0 1rem;
+  }
 }
 
 //question section------------------------------------------------
 
-
 .advisor {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
+// .question {
+//   // padding: 0 1rem;
+// }
 
-.question {
-    // padding: 0 1rem;
-    
-}
+.question h2 {
+  color: $text-color-light;
+  padding-top: 2rem;
+  margin-top: 0;
 
-.question h2  {
-    color: $text-color-light;
-    padding-top: 2rem;
-    margin-top: 0;
-
-    @include mq(37.5em) {
-        font-size: 2.4rem;
-        margin-bottom: 0;
-    }
+  @include mq(37.5em) {
+    font-size: 2.4rem;
+    margin-bottom: 0;
+  }
 }
 
 .question p {
-    color: $text-color-light;
-    border-bottom: 1px solid white;
-    padding-bottom: 2rem;
-    margin-bottom: .5rem;
+  color: $text-color-light;
+  border-bottom: 1px solid white;
+  padding-bottom: 2rem;
+  margin-bottom: 0.5rem;
 
-    @include mq(37.5em) {
-        font-size: 1.4rem;
-        color: $brand-color;
-        margin-top: .5rem;
-    }
-
-
+  @include mq(37.5em) {
+    font-size: 1.4rem;
+    color: $brand-color;
+    margin-top: 0.5rem;
+  }
 }
 
-.question div{
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 1rem 0;
+.question div {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem 0;
 
-    @include mq(37.5em) {
-        grid-template-columns: 1fr 1fr;
+  @include mq(37.5em) {
+    grid-template-columns: 1fr 1fr;
 
-        column-gap: 1rem;
+    column-gap: 1rem;
 
-        .product-type-fill {
-            grid-row: 2/3;
-        }
-
-        .flow-type-fill {
-            grid-row: 4/5;
-        }
-
-        .channel-depth-fill {
-            grid-row: 4/5;
-            grid-column: 2/3;
-        }
-
-        .channel-width-fill {
-            grid-row: 6/7;
-        }
-
-
+    .product-type-fill {
+      grid-row: 2/3;
     }
 
-    @include mq(68.75em) {
-        grid-template-columns: repeat(5, 1fr);
-
-        .product-type-fill {
-            grid-row: 2/3;
-        }
-
-        .screen-loc {
-            grid-column: 2/3;
-        }
-
-        .screen-loc-fill {
-            grid-column: 2/3;
-            grid-row: 2/3;
-        }
-
-        .flow-type {
-            grid-column: 3/4;
-            grid-row: 1/2;
-        }
-
-        .flow-type-fill {
-            grid-row: 2/3;
-            grid-column: 3/4;
-        }
-
-        .channel-depth {
-            grid-column: 4/5;
-            grid-row: 1/2;
-        }
-
-        .channel-depth-fill {
-            grid-row: 2/3;
-            grid-column: 4/5;
-        }
-
-        .channel-width-fill {
-            grid-row: 2/3;
-            grid-column: 5/6;
-        }
+    .flow-type-fill {
+      grid-row: 4/5;
     }
+
+    .channel-depth-fill {
+      grid-row: 4/5;
+      grid-column: 2/3;
+    }
+
+    .channel-width-fill {
+      grid-row: 6/7;
+    }
+  }
+
+  @include mq(68.75em) {
+    grid-template-columns: repeat(5, 1fr);
+
+    .product-type-fill {
+      grid-row: 2/3;
+    }
+
+    .screen-loc {
+      grid-column: 2/3;
+    }
+
+    .screen-loc-fill {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+
+    .flow-type {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+
+    .flow-type-fill {
+      grid-row: 2/3;
+      grid-column: 3/4;
+    }
+
+    .channel-depth {
+      grid-column: 4/5;
+      grid-row: 1/2;
+    }
+
+    .channel-depth-fill {
+      grid-row: 2/3;
+      grid-column: 4/5;
+    }
+
+    .channel-width-fill {
+      grid-row: 2/3;
+      grid-column: 5/6;
+    }
+  }
 }
 
 .question label {
-    color: $text-color-light;
-    padding: .5rem 0;
-    font-family: "Roboto", "Helvetica Neue", "Helvetica";
-    margin-top: 1rem;
-    
+  color: $text-color-light;
+  padding: 0.5rem 0;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica";
+  margin-top: 1rem;
 }
 
 .question select {
-    padding: 15px 0;
-    background-color: rgb(185, 185, 185);
-    font-size: 1rem;
-    font-weight: 600;
-    color: #555;
+  padding: 15px 0;
+  background-color: rgb(185, 185, 185);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
 }
 
 .question select:hover {
-    background-color: white;
+  background-color: white;
 }
 
 .question-button {
-    display: grid;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
 
-    text-align: center;
-    width: 100%;
-    padding: .8rem 2rem;
-    margin: 2rem 0;
-    // margin-top: 2rem;
-    background-color: $brand-color;
-    
-    text-decoration: none;
+  text-align: center;
+  width: 100%;
+  padding: 0.8rem 2rem;
+  margin: 2rem 0;
+  // margin-top: 2rem;
+  background-color: $brand-color;
+
+  text-decoration: none;
 }
 
 // .question-button:active {
@@ -329,81 +312,76 @@ p {
 // }
 
 .question-button a {
-    text-decoration: none;
-    color: $text-color-light;
-    font-size: 1rem;
+  text-decoration: none;
+  color: $text-color-light;
+  font-size: 1rem;
 }
 
 //About us section------------------------------------------------
 
 .about-us-container {
-    background-image: url(../images/bg-section-about-us.jpg);
-    // display: grid;
-    // grid-template-columns: 1fr;
-    // padding: 3rem 1rem;
-    // align-items: center;
-    // width: 100%;
-    background-size: cover;
-    background-position: 50% 0;
-    position: relative;
-    
+  background-image: url(../images/bg-section-about-us.jpg);
+  // display: grid;
+  // grid-template-columns: 1fr;
+  // padding: 3rem 1rem;
+  // align-items: center;
+  // width: 100%;
+  background-size: cover;
+  background-position: 50% 0;
+  position: relative;
 }
 
 .about-us h3 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: $text-color-light;
+  font-size: 2.5rem;
+  text-align: center;
+  color: $text-color-light;
 
-    @include mq(37.5em) {
-        font-size: 3rem;
-    }
+  @include mq(37.5em) {
+    font-size: 3rem;
+  }
 }
 
 .about-us p {
-    color: $text-color-light;
-    display: block;
-    padding: 0 50px 60px;
-    margin: 0;
+  color: $text-color-light;
+  display: block;
+  padding: 0 50px 60px;
+  margin: 0;
 
-    @include mq(37.5em) {
-        padding: 0 175px 60px;
-    }
-    
+  @include mq(37.5em) {
+    padding: 0 175px 60px;
+  }
 }
 
 .about-us {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    place-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  place-items: center;
 
-    
-    flex-direction: column;
-    padding: 150px 10px 100px ;
+  flex-direction: column;
+  padding: 150px 10px 100px;
 }
 
 .about-us-button {
-    display: inline-block;
-    // justify-content: center;
-    color: $text-color-light ;
-    border: 2px solid rgb(255, 255, 255);
-    background-color: transparent;
-    padding: 15px 35px;
-    margin: 2rem 0;
-    // max-width: 50%;
-
+  display: inline-block;
+  // justify-content: center;
+  color: $text-color-light;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: transparent;
+  padding: 15px 35px;
+  margin: 2rem 0;
+  // max-width: 50%;
 }
 
 .about-us-button a {
-    color: $text-color-light ;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 700;
+  color: $text-color-light;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 //Nadia Code
-
 
 body {
   font-family: $brand-font;
@@ -418,26 +396,37 @@ button {
 }
 
 .video-container {
-  background-color: $vulcan-blue;
-  height: 500px;
-  max-width: 100%;
   display: flex;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
 }
 
-.video {
-  display: block;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
+.video-section {
+  background-color: $vulcan-blue;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+iframe {
+  overflow: hidden;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 80%;
-  border: solid 10px #244a64;
+  height: 100%;
 }
 
 .forms {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .newsletter-container {
@@ -445,6 +434,8 @@ button {
   padding: 1.2rem;
   position: relative;
   padding-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .newsletter-container label {
@@ -452,18 +443,21 @@ button {
   align-items: center;
   margin: 0 auto;
   color: #244a64;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.2rem;
   text-align: center;
 }
 
 .enter-label {
   visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
 }
 
 .enter-email {
-  width: 100%;
   height: 30px;
+  width: 100%;
   display: block;
   padding-left: 1rem;
   justify-content: left;
@@ -475,23 +469,21 @@ button {
 .submit {
   background-color: $vulcan-blue;
   border: none;
-  position: relative;
-  bottom: 15px;
   color: white;
   justify-content: right;
   text-align: center;
-  width: 100px;
+  width: 100%;
+  padding: 0.8rem;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-.enter-label {
-  visibility: hidden;
+  font-weight: 600;
+  font-size: 0.7rem;
+  flex-basis: 30px;
 }
 
 .grids {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .card-1 {
@@ -553,20 +545,8 @@ button {
 .card-2 {
   display: block;
   position: relative;
-}
-
-.dark-wave-container {
-  display: flex;
-  position: relative;
   background-color: #154a66;
-}
-
-.dark-wave-container img {
   width: 100%;
-  height: 40vh;
-  margin: 0;
-  position: relative;
-  z-index: 300;
 }
 
 .card-2-text {
@@ -593,7 +573,7 @@ button {
   border: 1px solid #ffffff;
   background-color: transparent;
   z-index: 500;
-  bottom: 50%;
+  bottom: 20%;
   left: 0;
   right: 0;
   width: 240px;
@@ -611,6 +591,16 @@ button {
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.install-button a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+.contact-button a {
+  color: white;
+  text-decoration: none;
 }
 
 .light-blue-wave img {
@@ -665,13 +655,11 @@ footer {
 
 .phone {
   justify-content: center;
-  width: 100%;
+  width: 70%;
   position: absolute;
-  display: inline-block;
   vertical-align: middle;
   text-align: center;
-  padding: 1rem;
-  margin-right: 1rem;
+  margin-left: 0.5rem;
 }
 
 .contact-us {
@@ -681,16 +669,15 @@ footer {
   width: 100%;
   position: absolute;
   vertical-align: middle;
-  padding: 1rem;
   margin-right: 1rem;
   max-width: 100%;
 }
 
 .facebook {
-  display: block;
+  display: inline-block;
   position: absolute;
   text-align: left;
-  margin-left: 2rem;
+  margin-left: 0.2rem;
 }
 
 .linkedin {
@@ -715,68 +702,81 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 1rem;
+  top: 0;
+  margin-top: 12rem;
+}
+
+@media (min-width: 1000px) {
+  .contact-info-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+  }
+
+  .facebook {
+    text-align: left;
+    padding-left: 6rem;
+    position: absolute;
+    left: 50%;
+  }
+
+  .linkedin {
+    text-align: left;
+    padding-left: 6rem;
+    position: absolute;
+    left: 52%;
+  }
+
+  .phone {
+    position: absolute;
+    left: 39%;
+  }
+
+  .contact-us {
+    position: absolute;
+    right: 3%;
+  }
+
+  .logo {
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  .facebook {
+    text-align: left;
+    padding-left: 6rem;
+    position: absolute;
+    left: 73%;
+  }
+
+  .linkedin {
+    text-align: left;
+    padding-left: 6rem;
+    position: absolute;
+    left: 75%;
+  }
+
+  .phone {
+    position: absolute;
+    left: 60%;
+  }
+
+  .contact-us {
+    position: absolute;
+    left: 10%;
+  }
+
+  .logo {
+    padding-left: 2rem;
+  }
 }
 
 @media (min-width: 600px) {
-  // form .newsletter-container {
-  //   background-color: $vulcan-light-blue;
-  //   padding-top: 23px;
-  //   padding-bottom: 23px;
-  //   margin: auto;
-  //   padding-left: 1rem;
-  //   padding-right: 1rem;
-  //   position: relative;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
-
-  // .row-1 {
-  //   position: relative;
-  // }
-
-  // .newsletter-container label {
-  //   line-height: normal;
-  //   color: #244a64;
-  //   font-weight: 300;
-  //   font-size: 1.7rem;
-  //   display: block;
-  //   max-width: 100%;
-  //   margin: 0 auto;
-  //   text-align: center;
-  //   margin-bottom: 1rem;
-  // }
-
-  // .submit {
-  //   width: 95px;
-  //   float: right;
-  //   padding: 8px;
-  //   font-size: 1.1rem;
-  //   line-height: 17px;
-  //   font-weight: 700;
-  //   background-color: $vulcan-blue;
-  //   border: none;
-  //   color: white;
-  //   text-transform: uppercase;
-  // }
-
-  // .email-input {
-  //   overflow: hidden;
-  //   display: block;
-  // }
-
-  // .enter-email {
-  //   font-size: 1rem;
-  //   line-height: normal;
-  //   height: auto;
-  //   display: block;
-  //   position: relative;
-  //   width: 100%;
-  //   padding: 2rem;
-  // }
-
   .install-button {
-    bottom: 40%;
+    bottom: 20%;
     background-color: $vulcan-blue;
     border: none;
     color: white;
@@ -788,6 +788,13 @@ footer {
     border: none;
     color: white;
     font-size: 1.2rem;
+    width: 50%;
+  }
+
+  .contact-button a,
+  .install-button a {
+    color: white;
+    text-decoration: none;
   }
 
   .logo {
@@ -798,7 +805,7 @@ footer {
   }
 
   .card-1-text {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
   }
 
   .grids {
@@ -817,20 +824,67 @@ footer {
   }
 
   .card-2-text {
-    font-size: 2.5rem;
-    top: 30%;
+    font-size: 1.2rem;
+    top: 10%;
   }
 
   .card-1 img {
-    width: 100%;
     height: 100%;
+  }
+
+  .card-2 {
+    background-color: #154a66;
+    padding: 4rem;
   }
 }
 
+@media (min-width: 800px) {
+  .card-2-text {
+    font-size: 1.8rem;
+  }
+}
 
-// to do:
-// fix footer
-// make another media query for 1530px for dark blue wave image and others
-// fix forms (submit and email)
-// fix video border
+@media (min-width: 1000px) {
+  .video-container {
+    display: flex;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: auto;
+  }
 
+  .video-section {
+    background-color: $vulcan-blue;
+    padding: 2rem;
+    max-height: 600px;
+  }
+
+  iframe {
+    overflow: hidden;
+    display: inline-block;
+    background-color: green;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    margin: 0 auto;
+    width: 80%;
+    max-height: 350px;
+  }
+
+  .contact-button {
+    bottom: 40%;
+    width: 40%;
+    font-size: 1.6rem;
+  }
+
+  .card-2-text,
+  .card-1-text {
+    font-size: 2.2rem;
+  }
+
+  .install-button {
+    bottom: 27%;
+  }
+}
