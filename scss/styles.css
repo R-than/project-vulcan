@@ -36,8 +36,12 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "roboto condensed";
+  text-transform: uppercase;
 }
 
 h2 {
@@ -114,6 +118,13 @@ p {
     padding-bottom: 1rem;
   }
 }
+@media (min-width: 37.5em) {
+  .machine-text {
+    font-size: 1.3rem;
+    border-bottom: transparent;
+    padding-bottom: 1rem;
+  }
+}
 
 .machine-text h2 {
   grid-column: 2/3;
@@ -144,6 +155,8 @@ p {
   grid-row: 2/3;
   overflow: auto;
   font-size: 14px;
+  border-bottom: 1px solid black;
+  padding-bottom: 1rem;
 }
 @media (min-width: 68.75em) {
   .machine-text p {
@@ -173,8 +186,22 @@ p {
   margin-top: 0;
 }
 .advisor {
+  position: relative;
   display: block;
   width: 100%;
+}
+
+.advisor:before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  top: -62px;
+  right: 0;
+  z-index: -1;
+  height: 166px;
+  background-size: 160% 80%;
+  background-repeat: no-repeat;
+  background-image: url("../images/wave-blue-dark.png");
 }
 
 .question h2 {
@@ -184,19 +211,6 @@ p {
 }
 @media (min-width: 37.5em) {
   .question h2 {
-    font-size: 2.4rem;
-    margin-bottom: 0;
-  }
-}
-
-.question p {
-  color: white;
-  border-bottom: 1px solid white;
-  padding-bottom: 2rem;
-  margin-bottom: 0.5rem;
-}
-@media (min-width: 37.5em) {
-  .question p {
     font-size: 1.4rem;
     color: #429bd6;
     margin-top: 0.5rem;
@@ -369,26 +383,37 @@ button {
 }
 
 .video-container {
-  background-color: #0693e3;
-  height: 500px;
-  max-width: 100%;
   display: flex;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
 }
 
-.video {
-  display: block;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
+.video-section {
+  background-color: #0693e3;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+iframe {
+  overflow: hidden;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 80%;
-  border: solid 10px #244a64;
+  height: 100%;
 }
 
 .forms {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .newsletter-container {
@@ -396,6 +421,8 @@ button {
   padding: 1.2rem;
   position: relative;
   padding-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .newsletter-container label {
@@ -403,18 +430,21 @@ button {
   align-items: center;
   margin: 0 auto;
   color: #244a64;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.2rem;
   text-align: center;
 }
 
 .enter-label {
   visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
 }
 
 .enter-email {
-  width: 100%;
   height: 30px;
+  width: 100%;
   display: block;
   padding-left: 1rem;
   justify-content: left;
@@ -426,23 +456,21 @@ button {
 .submit {
   background-color: #0693e3;
   border: none;
-  position: relative;
-  bottom: 15px;
   color: white;
   justify-content: right;
   text-align: center;
-  width: 100px;
+  width: 100%;
+  padding: 0.8rem;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-.enter-label {
-  visibility: hidden;
+  font-weight: 600;
+  font-size: 0.7rem;
+  flex-basis: 30px;
 }
 
 .grids {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .card-1 {
@@ -505,20 +533,8 @@ button {
 .card-2 {
   display: block;
   position: relative;
-}
-
-.dark-wave-container {
-  display: flex;
-  position: relative;
   background-color: #154a66;
-}
-
-.dark-wave-container img {
   width: 100%;
-  height: 40vh;
-  margin: 0;
-  position: relative;
-  z-index: 300;
 }
 
 .card-2-text {
@@ -545,7 +561,7 @@ button {
   border: 1px solid #ffffff;
   background-color: transparent;
   z-index: 500;
-  bottom: 50%;
+  bottom: 20%;
   left: 0;
   right: 0;
   width: 240px;
@@ -564,6 +580,16 @@ button {
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.install-button a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+.contact-button a {
+  color: white;
+  text-decoration: none;
 }
 
 .light-blue-wave img {
@@ -619,13 +645,11 @@ footer {
 
 .phone {
   justify-content: center;
-  width: 100%;
+  width: 70%;
   position: absolute;
-  display: inline-block;
   vertical-align: middle;
   text-align: center;
-  padding: 1rem;
-  margin-right: 1rem;
+  margin-left: 0.5rem;
 }
 
 .contact-us {
@@ -635,16 +659,15 @@ footer {
   width: 100%;
   position: absolute;
   vertical-align: middle;
-  padding: 1rem;
   margin-right: 1rem;
   max-width: 100%;
 }
 
 .facebook {
-  display: block;
+  display: inline-block;
   position: absolute;
   text-align: left;
-  margin-left: 2rem;
+  margin-left: 0.2rem;
 }
 
 .linkedin {
@@ -669,12 +692,70 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 1rem;
+  top: 0;
+  margin-top: 12rem;
 }
 
+@media (min-width: 1000px) {
+  .contact-info-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+  }
+  .facebook {
+    text-align: left;
+    padding-left: 6rem;
+    position: absolute;
+    left: 50%;
+  }
+  .linkedin {
+    text-align: left;
+    padding-left: 6rem;
+    position: absolute;
+    left: 52%;
+  }
+  .phone {
+    position: absolute;
+    left: 39%;
+  }
+  .contact-us {
+    position: absolute;
+    right: 3%;
+  }
+  .logo {
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 1700px) {
+  .facebook {
+    text-align: left;
+    padding-left: 6rem;
+    position: absolute;
+    left: 73%;
+  }
+  .linkedin {
+    text-align: left;
+    padding-left: 6rem;
+    position: absolute;
+    left: 75%;
+  }
+  .phone {
+    position: absolute;
+    left: 60%;
+  }
+  .contact-us {
+    position: absolute;
+    left: 10%;
+  }
+  .logo {
+    padding-left: 2rem;
+  }
+}
 @media (min-width: 600px) {
   .install-button {
-    bottom: 40%;
+    bottom: 20%;
     background-color: #0693e3;
     border: none;
     color: white;
@@ -685,6 +766,12 @@ footer {
     border: none;
     color: white;
     font-size: 1.2rem;
+    width: 50%;
+  }
+  .contact-button a,
+  .install-button a {
+    color: white;
+    text-decoration: none;
   }
   .logo {
     width: 15%;
@@ -693,7 +780,7 @@ footer {
     margin: 0;
   }
   .card-1-text {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
   }
   .grids {
     display: grid;
@@ -708,12 +795,59 @@ footer {
     bottom: 25%;
   }
   .card-2-text {
-    font-size: 2.5rem;
-    top: 30%;
+    font-size: 1.2rem;
+    top: 10%;
   }
   .card-1 img {
-    width: 100%;
     height: 100%;
+  }
+  .card-2 {
+    background-color: #154a66;
+    padding: 4rem;
+  }
+}
+@media (min-width: 800px) {
+  .card-2-text {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1000px) {
+  .video-container {
+    display: flex;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: auto;
+  }
+  .video-section {
+    background-color: #0693e3;
+    padding: 2rem;
+    max-height: 600px;
+  }
+  iframe {
+    overflow: hidden;
+    display: inline-block;
+    background-color: green;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    margin: 0 auto;
+    width: 80%;
+    max-height: 350px;
+  }
+  .contact-button {
+    bottom: 40%;
+    width: 40%;
+    font-size: 1.6rem;
+  }
+  .card-2-text,
+  .card-1-text {
+    font-size: 2.2rem;
+  }
+  .install-button {
+    bottom: 27%;
   }
 }
 .my-header {
@@ -746,7 +880,7 @@ footer {
   display: none;
 }
 
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   .header-wrapper {
     position: absolute;
     display: flex;
@@ -788,6 +922,9 @@ footer {
     display: inline-block;
     margin-right: 10px;
   }
+  .header-item-list li:hover {
+    background-color: #429bd6;
+  }
   .text-left {
     position: absolute;
     text-align: left;
@@ -796,7 +933,20 @@ footer {
   .text-right {
     position: absolute;
     text-align: right;
-    right: 3rem;
+    right: 2rem;
+  }
+}
+@media (min-width: 1100px) {
+  .text-left {
+    padding-left: 5rem;
+    position: absolute;
+    text-align: left;
+    left: 0;
+  }
+  .text-right {
+    position: absolute;
+    text-align: right;
+    right: 7rem;
   }
 }
 .page-navigation {
@@ -860,6 +1010,20 @@ footer {
   height: 620px;
 }
 
+.slide {
+  display: none;
+}
+
+.w3-left .w3-right .w3-badge {
+  cursor: pointer;
+}
+
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  padding: 0;
+}
+
 .hero-text {
   display: grid;
   grid-template-columns: 1fr;
@@ -879,6 +1043,7 @@ footer {
 }
 
 .hero-buttons {
+  font-size: 0.7rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -891,6 +1056,7 @@ footer {
 .hero-buttons a {
   color: white;
   text-decoration: none;
+  font-size: 0.7rem;
 }
 
 .button-p {
@@ -903,6 +1069,7 @@ footer {
 .button-s {
   border: 1px solid white;
   line-height: 20px;
+  padding: 10px;
   width: 37%;
 }
 
@@ -914,7 +1081,7 @@ footer {
   z-index: 10;
 }
 
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   .slideshow-image-1 {
     -o-object-fit: cover;
        object-fit: cover;
@@ -931,8 +1098,19 @@ footer {
     margin-top: 5rem;
     line-height: 4rem;
   }
+}
+@media (min-width: 600px) and (min-width: 1100px) {
+  .hero-text h2 {
+    font-size: 80px;
+    margin-top: 5rem;
+    line-height: 5rem;
+    padding: 0 13rem;
+  }
+}
+@media (min-width: 600px) {
   .hero-buttons {
     display: flex;
+    font-size: 1rem;
     gap: 1rem;
     flex-direction: row;
     align-items: center;
@@ -960,6 +1138,14 @@ footer {
     height: 7rem;
     width: 100%;
     z-index: 10;
+  }
+}
+@media (min-width: 1100px) {
+  .hero-text h2 {
+    font-size: 80px;
+    margin-top: 5rem;
+    line-height: 5rem;
+    padding: 0 13rem;
   }
 }
 .slide {
