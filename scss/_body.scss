@@ -34,8 +34,7 @@ p {
   margin: 0 1rem;
   padding: 1rem 0;
   gap: 1rem;
-
-  // border-: 1px solid black;
+  margin-bottom: 3.5rem;
 
   text-align: center;
   align-items: center;
@@ -56,6 +55,7 @@ p {
       color: $brand-color;
       font-size: 1.8rem;
       margin-bottom: 0;
+      
     }
 
     a {
@@ -99,11 +99,7 @@ p {
     }
 
 
-  @include mq(37.5em) {
-    font-size: 1.3rem;
-    border-bottom: transparent;
-    padding-bottom: 1rem;
-  }
+ 
 }
 
 .machine-text h2 {
@@ -115,6 +111,8 @@ p {
     font-weight: 700;
     text-transform: uppercase;
     color: #555;
+    z-index: 1000;
+    margin-top: 2rem;
 
     @include mq(37.5em) {
         color: $secondary-color;
@@ -135,12 +133,13 @@ p {
     overflow: auto;
     font-size: 14px;
     border-bottom: 1px solid black;
-    padding-bottom: 1rem;
+    padding-bottom: 2.5rem;
 
 
     @include mq(68.75em) {
         font-size: 17px;
-        padding: 0 5rem;
+        padding: 0 5rem 3rem;
+        
     }
 
 }
@@ -205,10 +204,15 @@ p {
 
 
   @include mq(37.5em) {
-    font-size: 1.4rem;
-    color: $brand-color;
-    margin-top: 0.5rem;
+      font-size: 2.4rem;
+      margin-bottom: 0;
   }
+}
+
+.question p {
+  font-size: 1.4rem;
+  color: $brand-color;
+  margin-top: 0.5rem;
 }
 
 .question div {
