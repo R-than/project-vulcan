@@ -392,19 +392,15 @@ p {
 //End of Rathan Code
 
 //Start of Nadia Code
-
 body {
   font-family: $brand-font;
 }
-
 section {
   display: block;
 }
-
 button {
   display: inline-block;
 }
-
 .video-container {
   display: flex;
   position: relative;
@@ -414,13 +410,11 @@ button {
   max-width: 100%;
   height: auto;
 }
-
 .video-section {
   background-color: $vulcan-blue;
   padding: 2rem;
   margin: 0 auto;
 }
-
 iframe {
   overflow: hidden;
   background-color: green;
@@ -430,7 +424,6 @@ iframe {
   width: 100%;
   height: 100%;
 }
-
 .forms {
   display: grid;
   grid-template-columns: 1fr 70px;
@@ -438,7 +431,6 @@ iframe {
   justify-content: space-between;
   gap: 1rem;
 }
-
 .newsletter-container {
   background-color: $vulcan-light-blue;
   padding: 1.2rem;
@@ -447,24 +439,21 @@ iframe {
   margin-left: auto;
   margin-right: auto;
 }
-
 .newsletter-container label {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  color: #244a64;
+  color: #244A64;
   font-weight: 500;
   font-size: 1.2rem;
   text-align: center;
 }
-
 .enter-label {
   visibility: hidden;
   position: absolute;
   width: 1px;
   height: 1px;
 }
-
 .enter-email {
   height: 30px;
   width: 100%;
@@ -475,7 +464,6 @@ iframe {
   border: none;
   padding: 0.7rem;
 }
-
 .submit {
   background-color: $vulcan-blue;
   border: none;
@@ -489,20 +477,17 @@ iframe {
   font-size: 0.7rem;
   flex-basis: 30px;
 }
-
 .grids {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
 }
-
 .card-1 {
   display: block;
   position: relative;
   max-width: 100%;
   max-height: 100%;
 }
-
 .card-1-text {
   position: absolute;
   z-index: 500;
@@ -513,7 +498,7 @@ iframe {
   max-width: 100%;
   max-height: 80%;
   line-height: normal;
-  color: #504f4f;
+  color: #504F4F;
   text-transform: uppercase;
   font-size: 1.4rem;
   margin: 0 auto;
@@ -521,10 +506,9 @@ iframe {
   justify-content: center;
   align-items: center;
 }
-
 .install-button {
   position: absolute;
-  border: 1px solid #504f4f;
+  border: 1px solid #504F4F;
   background-color: transparent;
   z-index: 500;
   bottom: 25%;
@@ -536,7 +520,7 @@ iframe {
   text-transform: uppercase;
   font-weight: 750;
   padding: 0.5rem;
-  color: #2b2b2b;
+  color: #2B2B2B;
   font-size: 1.1rem;
   line-height: normal;
   margin: 0 auto;
@@ -546,19 +530,16 @@ iframe {
   justify-content: center;
   align-items: center;
 }
-
 .card-1 img {
   width: 100%;
   position: relative;
 }
-
 .card-2 {
   display: block;
   position: relative;
-  background-color: #154a66;
+  background-color: #154A66;
   width: 100%;
 }
-
 .card-2-text {
   position: absolute;
   z-index: 500;
@@ -577,10 +558,9 @@ iframe {
   justify-content: center;
   align-items: center;
 }
-
 .contact-button {
   position: absolute;
-  border: 1px solid #ffffff;
+  border: 1px solid #FFFFFF;
   background-color: transparent;
   z-index: 500;
   bottom: 20%;
@@ -592,7 +572,7 @@ iframe {
   text-transform: uppercase;
   font-weight: 750;
   padding: 0.5rem;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 0.9rem;
   line-height: normal;
   margin: 0 auto;
@@ -602,17 +582,14 @@ iframe {
   justify-content: center;
   align-items: center;
 }
-
 .install-button a {
-  color: #2b2b2b;
+  color: #2B2B2B;
   text-decoration: none;
 }
-
 .contact-button a {
   color: white;
   text-decoration: none;
 }
-
 .light-blue-wave img {
   position: relative;
   z-index: 2000;
@@ -620,14 +597,12 @@ iframe {
   height: 3rem;
   width: 100%;
 }
-
 footer {
-  background-color: #009ddc;
+  background-color: #009DDC;
   width: 100%;
   height: 30vh;
   position: absolute;
 }
-
 .logo {
   position: relative;
   width: 30%;
@@ -641,28 +616,23 @@ footer {
   display: block;
   z-index: 1000;
 }
-
 .footer-container {
   display: block;
   position: absolute;
   justify-content: space-between;
 }
-
 .contact-us {
   display: inline-block;
 }
-
 .footer-container a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
 }
-
 .contact-us svg,
 .phone svg {
   filter: invert(100%);
 }
-
 .phone {
   justify-content: center;
   width: 70%;
@@ -671,7 +641,6 @@ footer {
   text-align: center;
   margin-left: 0.5rem;
 }
-
 .contact-us {
   justify-content: space-between;
   text-align: right;
@@ -682,26 +651,22 @@ footer {
   margin-right: 1rem;
   max-width: 100%;
 }
-
 .facebook {
   display: inline-block;
   position: absolute;
   text-align: left;
   margin-left: 0.2rem;
 }
-
 .linkedin {
   display: block;
   text-align: right;
   margin-left: 2rem;
   margin-bottom: 0.8rem;
 }
-
 .contact-info-container {
   display: flex;
   margin-top: 2rem;
 }
-
 .copyright {
   color: white;
   font-size: 1rem;
@@ -715,8 +680,7 @@ footer {
   top: 0;
   margin-top: 12rem;
 }
-
-@media (min-width: 1000px) {
+@include mq(1000px) {
   .contact-info-container {
     display: flex;
     justify-content: flex-start;
@@ -724,74 +688,62 @@ footer {
     width: 100%;
     position: relative;
   }
-
   .facebook {
     text-align: left;
     padding-left: 6rem;
     position: absolute;
     left: 50%;
   }
-
   .linkedin {
     text-align: left;
     padding-left: 6rem;
     position: absolute;
     left: 52%;
   }
-
   .phone {
     position: absolute;
     left: 39%;
   }
-
   .contact-us {
     position: absolute;
     right: 3%;
   }
-
   .logo {
     padding-left: 2rem;
   }
 }
-
-@media (min-width: 1700px) {
+@include mq(1700px) {
   .facebook {
     text-align: left;
     padding-left: 6rem;
     position: absolute;
     left: 73%;
   }
-
   .linkedin {
     text-align: left;
     padding-left: 6rem;
     position: absolute;
     left: 75%;
   }
-
   .phone {
     position: absolute;
     left: 60%;
   }
-
   .contact-us {
     position: absolute;
     left: 10%;
   }
-
   .logo {
     padding-left: 2rem;
   }
 }
-
-@media (min-width: 600px) {
+@include mq(600px) {
   .install-button {
     bottom: 20%;
     background-color: $vulcan-blue;
     border: none;
     color: white;
   }
-
   .contact-button {
     bottom: 60%;
     background-color: $vulcan-blue;
@@ -800,61 +752,50 @@ footer {
     font-size: 1.2rem;
     width: 50%;
   }
-
   .contact-button a,
   .install-button a {
     color: white;
     text-decoration: none;
   }
-
   .logo {
     width: 15%;
     text-align: left;
     justify-content: left;
     margin: 0;
   }
-
   .card-1-text {
     font-size: 1.2rem;
   }
-
   .grids {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
-
   .card-2 {
     grid-column: 1;
     grid-row: 1;
   }
-
   .contact-button {
     bottom: 25%;
   }
-
   .card-2-text {
     font-size: 1.2rem;
     top: 10%;
   }
-
   .card-1 img {
     height: 100%;
   }
-
   .card-2 {
-    background-color: #154a66;
+    background-color: #154A66;
     padding: 4rem;
   }
 }
-
-@media (min-width: 800px) {
+@include mq(800px) {
   .card-2-text {
     font-size: 1.8rem;
   }
 }
-
-@media (min-width: 1000px) {
+@include mq(1000px) {
   .video-container {
     display: flex;
     position: relative;
@@ -864,13 +805,11 @@ footer {
     margin: 0 auto;
     height: auto;
   }
-
   .video-section {
     background-color: $vulcan-blue;
     padding: 2rem;
     max-height: 600px;
   }
-
   iframe {
     overflow: hidden;
     display: inline-block;
@@ -882,18 +821,15 @@ footer {
     width: 80%;
     max-height: 350px;
   }
-
   .contact-button {
     bottom: 40%;
     width: 40%;
     font-size: 1.6rem;
   }
-
   .card-2-text,
   .card-1-text {
     font-size: 2.2rem;
   }
-
   .install-button {
     bottom: 27%;
   }
