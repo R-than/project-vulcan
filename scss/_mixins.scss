@@ -4,20 +4,20 @@
 @use "variables" as *;
 
 @mixin flatten {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 // Media Query Mixin
-@mixin mq($w){
-    @media (min-width: $w){
-        @content;
-    }
+@mixin mq($w) {
+  @media (min-width: $w) {
+    @content;
+  }
 }
 
-@mixin media($w){
-    @media (max-width: $w) {
-        @content;
-    }
+@mixin media($w) {
+  @media (max-width: $w) {
+    @content;
+  }
 }
