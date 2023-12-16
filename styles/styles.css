@@ -41,6 +41,7 @@ h2,
 h3,
 h4 {
   font-family: "roboto condensed";
+  text-transform: uppercase;
 }
 
 h2 {
@@ -64,7 +65,6 @@ p {
   margin: 0 1rem;
   padding: 1rem 0;
   gap: 1rem;
-  margin-bottom: 3.5rem;
   text-align: center;
   align-items: center;
   place-items: center;
@@ -118,6 +118,13 @@ p {
     padding-bottom: 1rem;
   }
 }
+@media (min-width: 37.5em) {
+  .machine-text {
+    font-size: 1.3rem;
+    border-bottom: transparent;
+    padding-bottom: 1rem;
+  }
+}
 
 .machine-text h2 {
   grid-column: 2/3;
@@ -127,8 +134,6 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   color: #555;
-  z-index: 1000;
-  margin-top: 2rem;
 }
 @media (min-width: 37.5em) {
   .machine-text h2 {
@@ -151,12 +156,12 @@ p {
   overflow: auto;
   font-size: 14px;
   border-bottom: 1px solid black;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 68.75em) {
   .machine-text p {
     font-size: 17px;
-    padding: 0 5rem 3rem;
+    padding: 0 5rem;
   }
 }
 
@@ -206,15 +211,10 @@ p {
 }
 @media (min-width: 37.5em) {
   .question h2 {
-    font-size: 2.4rem;
-    margin-bottom: 0;
+    font-size: 1.4rem;
+    color: #429bd6;
+    margin-top: 0.5rem;
   }
-}
-
-.question p {
-  font-size: 1.4rem;
-  color: #429bd6;
-  margin-top: 0.5rem;
 }
 
 .question div {
@@ -225,7 +225,8 @@ p {
 @media (min-width: 37.5em) {
   .question div {
     grid-template-columns: 1fr 1fr;
-    column-gap: 1rem;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
   }
   .question div .product-type-fill {
     grid-row: 2/3;
@@ -516,7 +517,8 @@ iframe {
   font-size: 1.1rem;
   line-height: normal;
   margin: 0 auto;
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
   margin-top: 1rem;
   text-align: center;
   justify-content: center;
@@ -572,7 +574,8 @@ iframe {
   font-size: 0.9rem;
   line-height: normal;
   margin: 0 auto;
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
   margin-top: 1rem;
   text-align: center;
   justify-content: center;
@@ -608,7 +611,8 @@ footer {
   position: relative;
   width: 30%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
@@ -876,7 +880,7 @@ footer {
   display: none;
 }
 
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   .header-wrapper {
     position: absolute;
     display: flex;
@@ -918,6 +922,9 @@ footer {
     display: inline-block;
     margin-right: 10px;
   }
+  .header-item-list li:hover {
+    background-color: #429bd6;
+  }
   .text-left {
     position: absolute;
     text-align: left;
@@ -926,7 +933,20 @@ footer {
   .text-right {
     position: absolute;
     text-align: right;
-    right: 3rem;
+    right: 2rem;
+  }
+}
+@media (min-width: 1100px) {
+  .text-left {
+    padding-left: 5rem;
+    position: absolute;
+    text-align: left;
+    left: 0;
+  }
+  .text-right {
+    position: absolute;
+    text-align: right;
+    right: 7rem;
   }
 }
 .page-navigation {
@@ -946,6 +966,7 @@ footer {
 @media screen and (min-width: 600px) {
   .page-navigation {
     height: auto;
+    width: -moz-fit-content;
     width: fit-content;
     margin-bottom: 5rem;
     padding: 0.5rem;
@@ -982,10 +1003,25 @@ footer {
 }
 
 .slideshow-image-1 {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: relative;
   width: 100%;
   height: 620px;
+}
+
+.slide {
+  display: none;
+}
+
+.w3-left .w3-right .w3-badge {
+  cursor: pointer;
+}
+
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  padding: 0;
 }
 
 .hero-text {
@@ -1007,6 +1043,7 @@ footer {
 }
 
 .hero-buttons {
+  font-size: 0.7rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1019,6 +1056,7 @@ footer {
 .hero-buttons a {
   color: white;
   text-decoration: none;
+  font-size: 0.7rem;
 }
 
 .button-p {
@@ -1031,6 +1069,7 @@ footer {
 .button-s {
   border: 1px solid white;
   line-height: 20px;
+  padding: 10px;
   width: 37%;
 }
 
@@ -1042,9 +1081,10 @@ footer {
   z-index: 10;
 }
 
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   .slideshow-image-1 {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     position: relative;
     width: 100%;
     height: 900px;
@@ -1058,8 +1098,19 @@ footer {
     margin-top: 5rem;
     line-height: 4rem;
   }
+}
+@media (min-width: 600px) and (min-width: 1100px) {
+  .hero-text h2 {
+    font-size: 80px;
+    margin-top: 5rem;
+    line-height: 5rem;
+    padding: 0 13rem;
+  }
+}
+@media (min-width: 600px) {
   .hero-buttons {
     display: flex;
+    font-size: 1rem;
     gap: 1rem;
     flex-direction: row;
     align-items: center;
@@ -1087,6 +1138,14 @@ footer {
     height: 7rem;
     width: 100%;
     z-index: 10;
+  }
+}
+@media (min-width: 1100px) {
+  .hero-text h2 {
+    font-size: 80px;
+    margin-top: 5rem;
+    line-height: 5rem;
+    padding: 0 13rem;
   }
 }
 .slide {
@@ -1141,6 +1200,4 @@ footer {
   #hamburger-menu {
     display: none;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
